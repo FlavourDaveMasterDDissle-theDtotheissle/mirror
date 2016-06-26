@@ -24,7 +24,7 @@ public class Weather extends DataUpdater<WeatherData> {
   /**
    * The key used for the Forecast API.
    */
-  private static final String FORECAST_IO_API_KEY = "58b42a8aa74df3e828442a4fb79f5dba";
+  private static final String FORECAST_IO_API_KEY = "b83f844cbabd9d36a39463e65051ba99";
 
   /**
    * The time in milliseconds between API calls to update the weather.
@@ -144,7 +144,7 @@ public class Weather extends DataUpdater<WeatherData> {
    */
   private static String getRequestUrl(Location location) {
     if (location != null) {
-      return String.format(Locale.US, "https://api.forecast.io/forecast/%s/%f,%f",
+      return String.format(Locale.US, "https://api.forecast.io/forecast/%s/%f,%f?lang=de",
           FORECAST_IO_API_KEY, location.getLatitude(), location.getLongitude());
     } else {
       return null;
